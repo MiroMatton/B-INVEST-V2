@@ -1,0 +1,27 @@
+@import "variables";
+
+.info {
+  background-color: #fff2d6;
+  display: flex;
+  div {
+    padding: 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.bigButton {
+  font-family: "Lato", sans-serif;
+  background-color: $primaryColor;
+  color: $white;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 800;
+  padding: 1rem;
+  align-self: flex-start;
+}

@@ -1,0 +1,27 @@
+@import "variables";
+
+#realisaties {
+  display: flex;
+  margin: 5rem 0;
+
+  .realisatiesLijst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

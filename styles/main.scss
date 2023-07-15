@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import "variables";
+
+* {
+  font-family: "Lato", sans-serif;
+  color: $primaryColor;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: $backgroundColor;
+}
+
+.wrapper {
+  max-width: 100rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+#logo {
+  width: 7.5rem;
+}
+
+#tel {
+  color: $secondaryColor;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+header {
+  margin: 0;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#banner {
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  position: relative;
+  margin: 0.5rem;
+  font-weight: 800;
+  font-size: 1.3rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -0.75rem;
+    height: 100%;
+    width: 3px;
+    background-color: $secondaryColor;
+  }
+
+  &:first-child:before {
+    display: none;
+  }
+
+  &:hover {
+    color: $secondaryColor;
+  }
+}
+
+.dienstenNavigatie {
+  display: flex;
+  font-weight: 500;
+
+  p {
+    margin-left: 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+#diensten {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+
+.dienst {
+  display: flex;
+  flex-direction: column;
+
+  p,
+  button {
+    margin-top: 0.5rem;
+  }
+
+  button {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+    align-self: flex-start;
+  }
+
+  &Header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $secondaryColor;
+    font-size: 1rem;
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+}
+
+#B-invest {
+  ul {
+    list-style-type: square;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+
+    &::before {
+      content: ">";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      color: $secondaryColor;
+      margin-right: 5px;
+    }
+  }
+
+  button {
+    background-color: $primaryColor;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    padding: 0.4rem;
+    align-self: flex-start;
+  }
+}
+
+.opvolging {
+  background-color: $lightYellow;
+  display: flex;
+  padding: 1rem;
+}
+
+.review {
+  margin-bottom: 1rem;
+
+  .review-text {
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .review-name {
+    font-style: italic;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+#beoordelingen {
+  background-color: $lightGray;
+  padding: 0.5rem 1rem;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "img1 text"
+    "img2 text";
+
+  .title {
+    grid-area: title;
+    text-align: center;
+    background-color: $secondaryColor;
+  }
+
+  .image1 {
+    grid-area: img1;
+  }
+
+  .image2 {
+    grid-area: img2;
+  }
+
+  .text {
+    background-color: $lightGray;
+    grid-area: text;
+    padding-left: 1rem;
+  }
+}
+
+#overOns img {
+  max-width: 100%;
+  height: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  font-size: 0.75rem;
+  padding: 2rem 0;
+  background-color: $primaryColor;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 0.5rem;
+  }
+
+  p,
+  a {
+    color: white;
+    margin: 1rem 0;
+  }
+
+  .footerLogo {
+    width: 10rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+
+  li:before {
+    content: ">";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    color: $secondaryColor;
+    margin-right: 5px;
+  }
+
+  li {
+    color: white;
+  }
+
+  div img {
+    width: 3rem;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a,
+  p {
+    text-decoration: none;
+    position: relative;
+    margin: 0.5rem;
+  }
+
+  a::before,
+  p::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -0.75rem;
+    height: 100%;
+    width: 3px;
+    background-color: $secondaryColor;
+  }
+
+  a:first-child::before,
+  p:first-child::before {
+    display: none;
+  }
+
+  a:hover {
+    color: $secondaryColor;
+  }
+}
+
+#ruwbouw,
+#dakwerken,
+#afwerking,
+#totaalrenovatie,
+#verhuur {
+  margin: 10rem 0;
+  .title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    img {
+      width: 7rem;
+      height: auto;
+      position: absolute;
+      top: -4rem;
+      right: 5%;
+      transform: translateX(-50%);
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
+}

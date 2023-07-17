@@ -83,8 +83,9 @@ nav a {
   display: flex;
   font-weight: 500;
 
-  p {
-    margin-left: 1rem;
+  a {
+    text-decoration: none;
+    margin: 0.5rem;
     font-size: 0.75rem;
   }
 }
@@ -127,24 +128,49 @@ nav a {
   }
 }
 
+.bigButton {
+  font-family: "Lato", sans-serif;
+  background-color: $primaryColor;
+  color: $white;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 1rem;
+  margin: 1rem 0;
+  align-self: flex-start;
+}
+
 #B-invest {
-  ul {
-    list-style-type: square;
-    padding-left: 0;
+  h3 {
+    font-weight: 800;
+    margin: 0;
   }
 
-  li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
+  p {
+    margin: 0 0 1rem;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
 
-    &::before {
-      content: ">";
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      color: $secondaryColor;
-      margin-right: 5px;
+    li {
+      list-style-type: none;
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.5rem;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: $secondaryColor; // Replace with your desired color
+        margin-right: 5px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
     }
   }
 
@@ -162,6 +188,15 @@ nav a {
   background-color: $lightYellow;
   display: flex;
   padding: 1rem;
+
+  h4 {
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+  }
+
+  div {
+    margin-right: 1rem;
+  }
 }
 
 .review {
@@ -183,6 +218,16 @@ nav a {
 #beoordelingen {
   background-color: $lightGray;
   padding: 0.5rem 1rem;
+
+  h3 {
+    font-weight: 800;
+    margin: 1rem 0 0;
+  }
+
+  span {
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
 }
 
 section {

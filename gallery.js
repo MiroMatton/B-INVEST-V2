@@ -35,7 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
       `${basePath}/Ruwbouw/b-invest-5466.jpg`,
     ],
     DAKWERKEN: [
-      `${basePath}/Afwerking/Kruisstraat10Zele-14.jpg`,
+      `${basePath}/Dakwerken/dak1.jpg`,
+      `${basePath}/Dakwerken/dak2.jpg`,
+      `${basePath}/Dakwerken/dak3.jpg`,
+      `${basePath}/Dakwerken/dak4.jpg`,
+      `${basePath}/Dakwerken/dak5.jpg`,
+      `${basePath}/Dakwerken/dak6.jpg`,
     ],
     AFWERKING: [
       `${basePath}/Afwerking/Kruisstraat10Zele-04.jpg`,

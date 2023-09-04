@@ -101,13 +101,14 @@ nav a {
   flex-direction: column;
 
   p,
-  button {
+  a {
     margin-top: 0.5rem;
   }
 
-  button {
+  a {
     background-color: $primaryColor;
     color: $secondaryColor;
+    text-decoration: none;
     border: none;
     font-size: 1rem;
     font-weight: 800;
@@ -128,16 +129,39 @@ nav a {
   }
 }
 
+.smallButton {
+  background-color: $primaryColor;
+
+  border: none;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.25rem 0.5rem;
+  margin: 0.5rem 0;
+  align-self: flex-start;
+  cursor: pointer;
+  color: $white;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
 .bigButton {
   font-family: "Lato", sans-serif;
   background-color: $primaryColor;
-  color: $white;
   border: none;
   font-size: 1.2rem;
   font-weight: 800;
   padding: 1rem;
   margin: 1rem 0;
   align-self: flex-start;
+  color: $white;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 #B-invest {
@@ -258,13 +282,28 @@ section {
   .text {
     background-color: $lightGray;
     grid-area: text;
-    padding-left: 1rem;
-  }
-}
+    padding: 1rem 2rem;
 
-#overOns img {
-  max-width: 100%;
-  height: 100%;
+    h2,
+    h3 {
+      font-weight: 900;
+      font-size: 1rem;
+      margin: 1rem 0 0 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .image1,
+  .image2,
+  .image3 {
+    img {
+      width: 30rem;
+      height: 100%;
+    }
+  }
 }
 
 form {
@@ -283,22 +322,24 @@ form {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    margin: 0 0.5rem;
+    margin: 0 1.5rem;
   }
 
   p,
   a {
     color: white;
     margin: 1rem 0;
+    text-decoration: none;
   }
 
   .footerLogo {
-    width: 10rem;
+    width: 9rem;
+    margin: 0 2rem;
   }
 
   ul {
     list-style-type: none;
-    padding-left: 20px;
+    padding-left: 0px;
   }
 
   li:before {
@@ -363,6 +404,10 @@ form {
     justify-content: center;
     position: relative;
 
+    h1 {
+      max-width: 60%;
+    }
+
     img {
       width: 7rem;
       height: auto;
@@ -372,9 +417,22 @@ form {
       transform: translateX(-50%);
     }
   }
+}
 
-  img {
-    max-width: 100%;
-    height: 100%;
+#contact {
+  .text {
+    background-color: $white;
+
+    form {
+      margin: 1rem 0;
+
+      label {
+        color: $primaryColor;
+      }
+
+      input {
+        border: 1px solid $primaryColor;
+      }
+    }
   }
 }

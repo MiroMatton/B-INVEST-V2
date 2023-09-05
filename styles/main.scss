@@ -18,6 +18,10 @@ body {
   max-width: 100rem;
   width: 100%;
   padding: 0 1rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 #logo {
@@ -239,6 +243,11 @@ nav a {
 
   div {
     margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 }
 

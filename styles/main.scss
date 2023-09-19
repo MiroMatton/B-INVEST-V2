@@ -44,7 +44,7 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
 
   @media screen and (max-width: 768px) {
     display: flex;
@@ -54,22 +54,78 @@ header {
   }
 }
 
+.hamburger {
+  display: none;
+  margin: 1rem;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: $primaryColor;
+}
+
+@media only screen and (max-width: 768px) {
+  .navContainer {
+    position: fixed;
+    right: -100%;
+    flex-direction: column;
+    background: $backgroundColor;
+    width: 100%;
+    height: 80vh;
+    top: 20vh;
+    align-items: center !important;
+    transition: 0.3s;
+  }
+
+  .navContainer.active {
+    right: 0;
+  }
+
+  body.active {
+    overflow: hidden;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav,
+  .dienstenNavigatie {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  nav a {
+    &:before {
+      height: 0 !important;
+    }
+  }
+}
 .navContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    .dienstenNavigatie {
-      display: flex;
-      flex-direction: column;
-    }
-  }
 }
 
 #banner {
@@ -402,16 +458,13 @@ form {
   }
 
   @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 
     .footerLogo {
-      margin: 0 40%;
-      margin-bottom: 2rem;
-    }
-
-    div {
-      margin: 0 40%;
+      grid-column: span 2;
+      margin: 0 auto;
     }
   }
 }
@@ -451,6 +504,23 @@ form {
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
+
+    a::before,
+    p::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 3px;
+      top: -1.5rem;
+      background-color: $secondaryColor;
+      left: 50%;
+      transform-origin: left center;
+    }
+
+    a,
+    p {
+      margin: 1rem;
+    }
   }
 }
 

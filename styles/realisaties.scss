@@ -18,6 +18,20 @@
       margin-top: 1rem;
     }
   }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+
+    .realisatiesLijst {
+      margin-bottom: 2rem;
+      margin-right: 0rem;
+    }
+  }
+}
+
+.active-tab {
+  color: $secondaryColor;
+  font-weight: bold;
 }
 
 .gallery {

@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const basePath = 'assets/realisaties';
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const basePath = "assets/realisaties";
+
   const galleryImages = {
     RUWBOUW: [
       `${basePath}/Ruwbouw/b-invest-5344.jpg`,
@@ -118,77 +118,101 @@ document.addEventListener('DOMContentLoaded', () => {
       `${basePath}/Nieuwbouwprojecten/Zele - Kruis/IMG_7182.jpg`,
       `${basePath}/Nieuwbouwprojecten/Zele - Kruis/IMG_7321.jpg`,
       `${basePath}/Nieuwbouwprojecten/Zele - Kruis/IMG_9488.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-01.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-04.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-05.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-07.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-08.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-09.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-11.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-12.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-13.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-14.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-15.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-16.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-18.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-25.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-26.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-31.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-32.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-33.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-34.jpg`,
-      `${basePath}/Afwerking/Kruisstraat10Zele-40.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-01.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-04.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-05.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-07.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-08.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-09.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-11.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-12.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-13.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-14.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-15.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-16.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-18.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-25.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-26.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-31.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-32.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-33.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-34.jpg`,
+      `${basePath}/Nieuwbouwprojecten/Zele - Kruis/Kruisstraat10Zele-40.jpg`,
     ],
   };
-  
 
-  const galleryContainer = document.querySelector('.gallery');
-  const tabRuwbouw = document.getElementById('ruwbouwTab');
-  const tabDakwerken = document.getElementById('dakwerkenTab');
-  const tabAfwerking = document.getElementById('afwerkingTab');
-  const tabTotaalrenovatie = document.getElementById('totaalrenovatieTab');
-  const tabNieuwbouwprojecten = document.getElementById('nieuwbouwprojectenTab');
-  
+  const galleryContainer = document.querySelector(".gallery");
+  const tabRuwbouw = document.getElementById("ruwbouwTab");
+  const tabDakwerken = document.getElementById("dakwerkenTab");
+  const tabAfwerking = document.getElementById("afwerkingTab");
+  const tabTotaalrenovatie = document.getElementById("totaalrenovatieTab");
+  const tabNieuwbouwprojecten = document.getElementById(
+    "nieuwbouwprojectenTab"
+  );
+
   // Function to update the gallery images based on the selected category
   function updateGallery(category) {
     // Get the images for the selected category
     const images = galleryImages[category];
-  
+
     // Clear the existing gallery images
-    galleryContainer.innerHTML = '';
-  
+    galleryContainer.innerHTML = "";
+
     // Create and append new image elements to the gallery container
-    images.forEach(image => {
-      const imgElement = document.createElement('img');
+    images.forEach((image) => {
+      const imgElement = document.createElement("img");
       imgElement.src = image;
-      imgElement.alt = 'Image';
+      imgElement.alt = "Image";
       galleryContainer.appendChild(imgElement);
     });
   }
-  
-  
-  // Add event listeners to the tab buttons
-  tabRuwbouw.addEventListener('click', () => {
-    updateGallery('RUWBOUW');
+
+  tabRuwbouw.addEventListener("click", () => {
+    const allTabs = document.querySelectorAll(".tab");
+    allTabs.forEach((tab) => tab.classList.remove("active-tab"));
+
+    tabRuwbouw.classList.add("active-tab");
+
+    updateGallery("RUWBOUW");
   });
-  
-  tabDakwerken.addEventListener('click', () => {
-    updateGallery('DAKWERKEN');
+
+  tabDakwerken.addEventListener("click", () => {
+    const allTabs = document.querySelectorAll(".tab");
+    allTabs.forEach((tab) => tab.classList.remove("active-tab"));
+
+    tabDakwerken.classList.add("active-tab");
+
+    updateGallery("DAKWERKEN");
   });
-  
-  tabAfwerking.addEventListener('click', () => {
-    updateGallery('AFWERKING');
+
+  tabAfwerking.addEventListener("click", () => {
+    const allTabs = document.querySelectorAll(".tab");
+    allTabs.forEach((tab) => tab.classList.remove("active-tab"));
+
+    tabAfwerking.classList.add("active-tab");
+
+    updateGallery("AFWERKING");
   });
-  
-  tabTotaalrenovatie.addEventListener('click', () => {
-    updateGallery('TOTAALRENOVATIE');
+
+  tabTotaalrenovatie.addEventListener("click", () => {
+    const allTabs = document.querySelectorAll(".tab");
+    allTabs.forEach((tab) => tab.classList.remove("active-tab"));
+
+    tabTotaalrenovatie.classList.add("active-tab");
+
+    updateGallery("TOTAALRENOVATIE");
   });
-  
-  tabNieuwbouwprojecten.addEventListener('click', () => {
-    updateGallery('NIEUWBOUWPROJECTEN');
+
+  tabNieuwbouwprojecten.addEventListener("click", () => {
+    const allTabs = document.querySelectorAll(".tab");
+    allTabs.forEach((tab) => tab.classList.remove("active-tab"));
+
+    tabNieuwbouwprojecten.classList.add("active-tab");
+
+    updateGallery("NIEUWBOUWPROJECTEN");
   });
-  
+
   // Show the initial gallery based on the default tab
-  const defaultCategory = 'RUWBOUW'; // Change this to the desired default category
+  const defaultCategory = "RUWBOUW"; // Change this to the desired default category
   updateGallery(defaultCategory);
 });
